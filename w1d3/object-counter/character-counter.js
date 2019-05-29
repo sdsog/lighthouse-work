@@ -1,21 +1,35 @@
-var inputString = "lighthouse";
-
+var inputString = "lighthouseinthehouse";
 
 function countLetters(inputString) {
-	var characterCount = {};
-	console.log(inputString);
-	console.log(typeof characterCount);
 	
+	console.log("INPUTTED STRING: " + inputString);
+	
+	var cleanedString = inputString.replace(/\s+/g, '');
+	console.log(cleanedString);
+	var characterCount = {};
 
-	for (var i = 0; i < inputString.length; i++) {
-		characterCount[inputString[i]] = [i];
+	for (var i = 0; i < cleanedString.length; i++) {
+		if (characterCount[inputString[i]]) {
+			characterCount[inputString[i]]++;
+		} else {
+			characterCount[inputString[i]] = 1;
+		}
 	}
- 
- 	console.log("object keys: " + (Object.keys(characterCount)));
 
-}
+	// console.log(Object.keys(characterCount));
+	
+	// for (var i = 0; i < inputString.length; i++) {
+	// 	console.log(characterCount);
+	// 	console.log(inputString[i]);
+		
+		// if (characterCount[i] === inputString[i]) {
+	return characterCount;
+		// 	}
+}	
 
 console.log(countLetters(inputString));
+ 
+
 
 
 /*
