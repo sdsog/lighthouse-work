@@ -2,10 +2,7 @@ var inputString = "lighthouseinthehouse";
 
 function countLetters(inputString) {
 	
-	console.log("INPUTTED STRING: " + inputString);
-	
 	var cleanedString = inputString.replace(/\s+/g, '');
-	console.log(cleanedString);
 	var characterCount = {};
 
 	for (var i = 0; i < cleanedString.length; i++) {
@@ -16,15 +13,8 @@ function countLetters(inputString) {
 		}
 	}
 
-	// console.log(Object.keys(characterCount));
-	
-	// for (var i = 0; i < inputString.length; i++) {
-	// 	console.log(characterCount);
-	// 	console.log(inputString[i]);
-		
-		// if (characterCount[i] === inputString[i]) {
 	return characterCount;
-		// 	}
+
 }	
 
 console.log(countLetters(inputString));
